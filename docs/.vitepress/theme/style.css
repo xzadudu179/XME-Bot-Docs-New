@@ -114,6 +114,8 @@
             #ffa34155 50%,
             #ffb75155 50%);
     --vp-home-hero-image-filter: blur(44px);
+    --docsearch-modal-background: var(--vp-c-bg-alt) !important;
+    --docsearch-text-color: var(--vp-c-text-1) !important;
 }
 
 @media (min-width: 640px) {

@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Documentation
-      link: /markdown-examples
+      link: /glossary
     - theme: alt
       text: Get Started
-      link: /api-examples
+      link: /get_started
   image:
     src: https://image.179.life/images/deon_avatar_round.png
     alt: XME-Bot
