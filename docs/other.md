@@ -1,3 +1,12 @@
+---
+prev:
+  text: '使用文档'
+  link: '/glossary'
+next:
+  text: '快速开始'
+  link: '/get_started'
+---
+
 # 其他
 
 ## 帮助编写文档

@@ -1,4 +1,4 @@
-# 搭建（WIP）
+# 搭建 <Badge type="warning">WIP</Badge>
 
 ::: warning 注意
 这是为开发者搭建自己的 XME-Deon-bot 实例相关的文档，并不建议 bot 使用者浏览。

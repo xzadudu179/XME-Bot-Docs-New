@@ -41,7 +41,10 @@ export default defineConfig({
                     { text: "投喂九九", link: "https://afdian.com/a/xzadudu179" },
                     { text: "功能建议", link: "https://docs.qq.com/form/page/DU1dNckFnVGRZeEZt" },
                 ],
-
+                docFooter: {
+                    prev: "上一页面",
+                    next: "下一页面",
+                },
                 sidebar: [
                     {
                         text: "使用文档",
@@ -59,10 +62,14 @@ export default defineConfig({
                         items: [{ text: "其他", link: "/other" }],
                     },
                 ],
-                socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
+                socialLinks: [{ icon: "github", link: "https://github.com/xzadudu179/XME-bot-qq" }],
                 footer: {
                     message: "XME-Bot Released under the Apache 2.0 License.",
                     copyright: "Copyright © 2024-present xzadudu179",
+                },
+                editLink: {
+                    pattern: "https://github.com/xzadudu179/XME-Bot-Docs-New/docs/:path",
+                    text: "在 Github 上编辑该页面",
                 },
             },
         },
@@ -87,6 +94,10 @@ export default defineConfig({
                     },
                 ],
                 socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
+                editLink: {
+                    pattern: "https://github.com/xzadudu179/XME-Bot-Docs-New:path",
+                    text: "Edit this page on GitHub",
+                },
             },
         },
     },

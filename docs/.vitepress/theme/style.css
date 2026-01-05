@@ -107,12 +107,12 @@
 :root {
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: -webkit-linear-gradient(120deg,
-            #ffa341 30%,
+            #ffb751 30%,
             #ffb751);
 
     --vp-home-hero-image-background-image: linear-gradient(-45deg,
-            #ffa34155 50%,
-            #ffb75155 50%);
+            #ffa34125 50%,
+            #ffa34125 50%);
     --vp-home-hero-image-filter: blur(44px);
     --docsearch-modal-background: var(--vp-c-bg-alt) !important;
     --docsearch-text-color: var(--vp-c-text-1) !important;
