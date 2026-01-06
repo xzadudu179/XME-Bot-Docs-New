@@ -1,1317 +1,1283 @@
 ---
 next:
-  text: '其他'
-  link: '/other'
+  text: 'Other'
+  link: '/en/other'
 ---
 
-# 指令与插件列表
+# Commands and Plugins List
 
 <!-- > 目前还 (几乎) 没有任何内容 -->
 
-## 注意事项
+## Notes
 
 ---
 
-### 提醒
+### Warning
 
-- 请 **一定不要** 以及 **尽量避免** 让 bot 以任何形式输出敏感/违规字符，很容易导致 bot 被永久冻结！
+- Please do **not** and **avoid as much as possible** making the bot output sensitive/illegal characters in any form — this can easily cause the bot to be permanently banned!
 
-  如果有任何形式导致 bot 因为用户输入的违规行为被封禁，一旦发现会 **追究责任** 且 **记录用户 qq 账号。**
+  If any behavior causes the bot to be banned due to a user's illegal input, the responsible user will be **held accountable** and their QQ account will be recorded.
 
-- 该 bot 还在 **早期开发阶段**，很多功能很可能会变化很大。
+- This bot is still in an **early development stage**, many features may change significantly.
 
-- 默认权限暂为 **在群聊内**。
+- Default scope is **in group chats**.
 
 ---
 
-### 关于指令
+### About commands
 
 ::: tip
-关于指令详情参见[指令术语](./glossary#指令)
-
-关于参数详情参见[参数术语](./glossary#args)
+See [Commands terminology](./glossary#commands) and [Arguments terminology](./glossary#args) for command details and argument details.
 :::
 
 ---
 
-#### 指令格式
+#### Command format
 
-- 在指令列表中，指令格式为：
+- In the command list, each command is documented as:
 
-  **指令名**
+  **Command name**
 
-  - **作用**
+  - **Purpose**
 
-    关于指令是干什么用的。
+    What the command does.
 
-  - **用法**
+  - **Usage**
 
-    关于指令的具体使用语法，例如：
+    Specific syntax of the command, for example:
     ``` Text
-    /指令名 (必选参数) <可选参数> [类Shell参数]
+    /command_name (required param) <optional param> [shell-like options]
     ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    关于指令所需的[权限](glossary?id=权限)。若没有则为 `无`。若有会写出具体条件，需要符合条件才可调用指令。
+    The required [permissions](glossary?id=permissions) for the command. If none, it's `None`. If present, specific conditions will be listed.
 
-  - **频率/时间限制**
+  - **Rate/Time limits**
 
-    关于指令的频率与时间限制，例如一天只能调用一次之类的。
+    Rate or time restrictions for the command (e.g., once per day).
 
-    该项说明为可选项，只有拥有限制的才会说明。
+    This item is optional and will be shown only if restrictions apply.
 
-- **别名**
+- **Aliases**
 
-    关于指令的别名，使用指令的别名也可以调用指令。
+    Alternative names that can invoke the command.
 
-    比如 `help` 指令有 `帮助` 别名，所以  使用 `/帮助` 和使用 `/help` 并没有区别。
-
----
-
-#### 插件格式
-
-- 有些指令被分类在插件里，插件的格式为：
-
-  **插件名**
-
-  - **插件介绍**
-
-    关于插件的一些功能介绍
-
-  - **指令列表：**
-
-    指令会被写在这里
+    For example the `help` command has the alias `帮助`, so `/帮助` and `/help` behave the same.
 
 ---
 
-## 功能列表
+#### Plugin format
 
-### [指令] 7timers
+- Some commands are grouped into plugins; plugin format:
 
-- **作用**
+  **Plugin name**
 
-  使用你的位置查看当前位置晴天钟 经纬度数字以逗号分隔（可自动识别，默认 `纬度,经度`）
+  - **Plugin description**
 
-  晴天钟使用详情：
+    Overview of plugin functionality.
 
-  天文图查看指南：
+  - **Commands:**
 
-  - 全天云量：八分图，蓝色代表晴天所占的比例，白色代表云所占的比例，从左到右的云量从0%递增到100%。
-  - 大气视宁度：图标越小/越蓝，视宁度越好。
-  - 大气透明度：横杠越少/越蓝，透明度越好。
-  - 高湿度警告：图标从小到大：相对湿度介于`80%-90%`，`90%-95%`，以及`超过95%`。
-  - 降雨/降雪：图标表示可能降雨/降雪
-  - 不稳定预警：大气不稳定度，图标从少到多分别代表抬升指数介于`0至-3`，`-3至-5`，以及`小于-5`。
-  - 大风预警：图标从小到大：持续风速介于`8.0-10.8米/秒（5级）`，`10.8-17.2米/秒（6-7级）`，以及`17.2米/秒以上（8级以上）`。
+    Commands provided by the plugin.
 
-- **用法**
+---
+
+## Features
+
+### [command] 7timers
+
+- **Purpose**
+
+  Use your location to view the local 7timers (sky condition) by latitude,longitude separated by comma (auto-detection; default `lat,lon`).
+
+  7timers details:
+
+  Astronomical map guide:
+
+  - Cloud cover: eighth-chart; blue indicates clear-sky proportion, white indicates cloud; left→right cloud fraction increases from 0% to 100%.
+  - Seeing: smaller/bluer icons mean better seeing.
+  - Transparency: fewer/ bluer bars mean better transparency.
+  - High humidity warning: icons small→large indicate relative humidity `80%-90%`, `90%-95%`, and `>95%`.
+  - Rain/snow: icons indicate possible precipitation.
+  - Instability warning: icons few→many indicate lift index in `0 to -3`, `-3 to -5`, and `< -5`.
+  - Strong wind warning: icons small→large indicate sustained wind speeds `8.0-10.8 m/s (Beaufort 5)`, `10.8-17.2 m/s (6-7)`, and `>17.2 m/s (8+)`.
+
+- **Usage**
 
 ``` Text
-/7timers <纬度,经度>
+/7timers <lat,lon>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `7t`、 `晴天钟`
+  `7t`, `晴天钟`
 
 ---
 
-### [插件] XME 宇宙
+### [plugin] XME Universe
 
-- **作用**
+- **Purpose**
 
-  需要获取用户信息的功能, 使用 `/userhelp <功能名>` 来查看详细的帮助。
+  Features that need user info. Use `/userhelp <feature>` for detailed help.
 
-- **指令列表：**
+- **Commands:**
 
-  #### [指令] celestial
+  #### [command] celestial
 
-  - **作用**
+  - **Purpose**
 
-    查看你所在或是周边的星体（输入坐标）
+    View celestial objects at or near a location (input coordinates).
 
-  - **用法**
-
-  ``` Text
-  /celestial <星域坐标 x> <星域坐标 y>
-  ```
-
-  - **权限/可用范围**
-
-    无/未标注
-
-  - **别名**
-
-    `cele`、 `celes`、 `查看天体`、 `天体`
-
-  ---
-  #### [指令] coinrank
-
-  - **作用**
-
-    查看你周边人的星币数量排行榜
-
-    参数填写整数是改变排名长度，最大 20
-
-    填写 `avg` 为平均，`sum` 为总和。添加 `top` 参数为显示总榜（从 1 开始）。
-
-    最后一个参数是 `spacing` 将让排名输出格式改为空格而不是换行
-
-  - **用法**
+  - **Usage**
 
   ``` Text
-  /coinrank <排名长度/avg sum> <top> <spacing>
+  /celestial <sector x> <sector y>
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    无/未标注
+    None / not specified
 
-  - **别名**
+  - **Aliases**
 
-    `rank`、 `星币排行`、 `ranking`
+    `cele`, `celes`, `查看天体`, `天体`
 
   ---
-  #### [指令] describe
+  #### [command] coinrank
 
-  - **作用**
+  - **Purpose**
 
-    设置自己在 `/info` 指令下可被看到的个人介绍
+    View nearby users' coin leaderboard.
 
-  - **用法**
+    Integer param changes ranking length, max 20.
+
+    Use `avg` for average, `sum` for total. Add `top` to show global top (starting from 1).
+
+    Final param `spacing` makes output use spaces instead of newlines.
+
+  - **Usage**
 
   ``` Text
-  /describe <个人资料文本>
+  /coinrank <length/avg sum> <top> <spacing>
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    无/未标注
+    None / not specified
 
-  - **别名**
+  - **Aliases**
 
-    `bio`、 `intro`、 `desc`
+    `rank`, `星币排行`, `ranking`
 
   ---
-  #### [指令] map
+  #### [command] describe
 
-  - **作用**
+  - **Purpose**
 
-    可以查看到你周边的恒星系
+    Set a personal description visible under `/info`.
 
-  - **用法**
+  - **Usage**
+
+  ``` Text
+  /describe <profile text>
+  ```
+
+  - **Permissions/Scope**
+
+    None / not specified
+
+  - **Aliases**
+
+    `bio`, `intro`, `desc`
+
+  ---
+  #### [command] map
+
+  - **Purpose**
+
+    View local star systems around you.
+
+  - **Usage**
 
   ``` Text
   /map
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    无/未标注
+    None / not specified
 
-  - **别名**
+  - **Aliases**
 
-    `无`
+    none
 
   ---
-  #### [指令] achievement
+  #### [command] achievement
 
-  - **作用**
+  - **Purpose**
 
-    查看所有成就，使用 `/achi 成就名` 可以查看指定名称的成就详情。
+    View all achievements; use `/achi <name>` to see details.
 
-  - **用法**
+  - **Usage**
 
   ``` Text
-  /achievement <成就关键词或序号>
+  /achievement <achievement keyword or index>
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    无/未标注
+    None / not specified
 
-  - **别名**
+  - **Aliases**
 
-    `查看成就`、 `成就`、 `achi`
+    `查看成就`, `成就`, `achi`
 
   ---
-  #### [指令] inventory
+  #### [command] inventory
 
-  - **作用**
+  - **Purpose**
 
-    操作物品栏里的物品内容，不填写参数是查看物品栏
+    Manage or view items in your inventory; no args shows the inventory.
 
-  - **用法**
+  - **Usage**
 
   ``` Text
   /inventory
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    无/未标注
+    None / not specified
 
-  - **别名**
+  - **Aliases**
 
-    `inv`、 `物品栏`
+    `inv`, `物品栏`
 
   ---
-  #### [指令] lottery
+  #### [command] lottery
 
-  - **作用**
+  - **Purpose**
 
-    花费指定量的星币，抽取最多 4 倍量的星币
-    每日可以抽取 5 次，在第二个参数里输入大于 0 的整数可以多次抽取，或使用 `/lot 土块` `/lot 梭哈` `/lot all` `/lot allin` 来快速投入 5 次最大星币值。
+    Spend coins to draw up to 4x coins. 5 draws per day. Second param integer >0 repeats draws. Quick options: `/lot 土块` `/lot 梭哈` `/lot all` `/lot allin` to invest max 5 times.
 
-  - **用法**
+  - **Usage**
 
   ``` Text
-  /lottery (星币数量/梭哈) <连续抽取次数>
+  /lottery (coins/allin) <repeat count>
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    无/未标注
+    None / not specified
 
-  - **别名**
+  - **Aliases**
 
-    `抽奖`、 `lot`
+    `抽奖`, `lot`
 
   ---
-  #### [指令] sendcoin
+  #### [command] sendcoin
 
-  - **作用**
+  - **Purpose**
 
-    at 一个人并且给他指定数量的星币，星币数以空格分隔，最后会加起来
+    @ someone and give them specified coins; coin amounts separated by spaces will be summed.
 
-  - **用法**
+  - **Usage**
 
   ``` Text
-  /sendcoin (at目标用户) (星币数量 以空格分隔)
+  /sendcoin (at target) (coin amounts separated by spaces)
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    在群聊内
+    In group chats
 
-  - **别名**
+  - **Aliases**
 
-    `转账`、 `给星币`、 `ta`、 `transfer`、 `givecoin`、 `v`
+    `转账`, `给星币`, `ta`, `transfer`, `givecoin`, `v`
 
   ---
-  #### [指令] sign
+  #### [command] sign
 
-  - **作用**
+  - **Purpose**
 
-    签到，并且得到一定量的星币
+    Daily sign-in to earn coins.
 
-  - **用法**
+  - **Usage**
 
   ``` Text
   /sign
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    无/未标注
+    None / not specified
 
-  - **别名**
+  - **Aliases**
 
-    `签到`、 `register`、 `s`
+    `签到`, `register`, `s`
 
   ---
-  #### [指令] userinfo
+  #### [command] userinfo
 
-  - **作用**
+  - **Purpose**
 
-    查看自己当前被记录的个人信息，比如星币数量等, 如果 at 人则会查看那个人的个人信息
+    View recorded personal info (e.g., coin count). If you @ someone, view that person's info.
 
-  - **用法**
+  - **Usage**
 
   ``` Text
-  /userinfo <at人>
+  /userinfo <@user>
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
 
 
-  - **别名**
+  - **Aliases**
 
-    `个人信息`、 `个人资料`、 `uinfo`、 `info`
+    `个人信息`, `个人资料`, `uinfo`, `info`
 
   ---
-  #### [指令] userhelp
+  #### [command] userhelp
 
-  - **作用**
+  - **Purpose**
 
-    查看某一用户功能指令的详细帮助
+    View detailed help for a user-related feature command.
 
-  - **用法**
+  - **Usage**
 
   ``` Text
-  /userhelp <指令名或别名>
+  /userhelp <command or alias>
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    无/未标注
+    None / not specified
 
-  - **别名**
+  - **Aliases**
 
-    `uhelp`、 `用户帮助`、 `uh`
+    `uhelp`, `用户帮助`, `uh`
 
   ---
 
-### [指令] ai_helper
+### [command] ai_helper
 
-- **作用**
+- **Purpose**
 
-  使用 ChatGLM 大模型的 AI 助手，主要用于解答 bot 使用方面的问题，每小时可使用 15 次
+  AI assistant using ChatGLM large model, mainly for answering bot-usage questions. 15 uses per hour.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/ai_helper (对话内容) [OPTION]
+/ai_helper (conversation) [OPTION]
 OPTION:
-	-h, --help	查看帮助
-	-r, --raw	会把之后的文本全都解析为单纯的文本（注：这个参数优先级最大）
-	-c, --ctrl	只需要在任意地方输入 -c 即可将原本输入给 AI 的内容变为指令
-当前指令参数列表：
-clear : 清除你的所有对话历史
+    -h, --help	Show help
+    -r, --raw	Parse all following text as plain text (highest priority)
+    -c, --ctrl	Including -c anywhere turns the following content into a command
+Current command params:
+clear : Clear your conversation history
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无/未标注
+  None / not specified
 
-- **别名**
+- **Aliases**
 
-  `ai`、 `aih`
+  `ai`, `aih`
 
 ---
 
-### [指令] alias
+### [command] alias
 
-- **作用**
+- **Purpose**
 
-  使用参数获得指定指令的别名列表，可以使用别名调用这个指令
+  Get alias list for a command; aliases can be used to invoke that command.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/alias (指令名或别名)
+/alias (command or alias)
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `别名`、 `al`
+  `别名`, `al`
 
 ---
 
-### [指令] announce
+### [command] announce
 
-- **作用**
+- **Purpose**
 
-  发布公告，会在报时时出现
+  Publish an announcement; will appear in scheduled reports.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/announce <(SUPERUSER)公告内容>
+/announce <(SUPERUSER)announcement content>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `公告`、 `anno`
+  `公告`, `anno`
 
 ---
 
-### [指令] answer
+### [command] answer
 
-- **作用**
+- **Purpose**
 
-  让漠月翻开答案之书的一页，并且读出内容
+  Let Deon open a page of the Book of Answers and read it aloud.
 
-  > 心中默念你的问题，将会得到你的答案。
+  > Think your question silently and you will receive your answer.
 
-- **用法**
+- **Usage**
 
 ``` Text
 /answer
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `答案之书`、 `ans`、 `550w`
+  `答案之书`, `ans`, `550w`
 
 ---
 
-### [指令] bot_leave
+### [command] bot_leave
 
-- **作用**
+- **Purpose**
 
-  使漠月操控 XME-Deon-Bot 退出群聊
+  Make Deon command the XME-Deon-Bot to leave the group.
 
-- **用法**
+- **Usage**
 
 ``` Text
 /bot_leave
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  是管理 或 是群主 或 是 SUPERUSER & 在群聊内
+  Is admin OR group owner OR SUPERUSER & in group chat
 
-- **别名**
+- **Aliases**
 
-  `漠月退群`、 `漠月退出群聊`、 `Deon_exit`
-
----
-
-### [指令] bottodo
-
-- **作用**
-
-  查看或修改 bot 的待办事项 / 以后要更新的内容
-
-  修改待办需要 SUPERUSER
-
-- **用法**
-
-``` Text
-/bottodo <待办名>
-```
-
-- **权限/可用范围**
-
-  无
-
-- **别名**
-
-  `bot待办`、 `show_bottodo`
+  `漠月退群`, `漠月退出群聊`, `Deon_exit`
 
 ---
 
-### [指令] calc
+### [command] bottodo
 
-- **作用**
+- **Purpose**
 
-  输入一个算式，然后进行计算，参数若填写 `funcs` 则是查看计算器拥有的自定函数列表
+  View or modify bot's TODOs / upcoming updates.
 
-  参数若填写 `builtins` 则是查看计算器拥有的内置函数列表
+  Modifying TODOs requires SUPERUSER.
 
-  计算器可定义变量，定义变量需要单独为一行且在算式之前，格式为 变量名=变量值。
-
-  计算器可绘制函数，只需要在需要绘制函数的语句开头输入 `:` 然后输入函数。 例如 `:sin(x)`，若需要绘制 3D 函数，需要在需要绘制函数的语句开头输入 `::` 然后输入函数。
-
-  注意：不可以写类似 `2x` 之类的东西，需要写成 `2*x`
-
-- **用法**
+- **Usage**
 
 ``` Text
-/calc (算式)
+/bottodo <todo name>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  是 SUPERUSER
+  None
 
-- **别名**
+- **Aliases**
 
-  `计算`、 `cc`
+  `bot待办`, `show_bottodo`
 
 ---
 
-### [指令] choice
+### [command] calc
 
-- **作用**
+- **Purpose**
 
-  让漠月帮忙决定事情吧！默认用空格分隔，若是英文则以英文逗号分隔。
+  Enter an expression to calculate. `funcs` lists custom functions; `builtins` lists builtin functions.
 
-  漠月会因情况的不同而返回不同的结果，例如：在 choice 的参数中填写一个数字范围比如 `1~10` 会返回 1 ~ 10 的随机数
+  Calculator supports variable definitions; define variables on their own line before expressions as `name=value`.
 
-  其中，有一些可指定的全局变量，在 choice 里以 `{xxx}` 的方式使用即可调用：
+  Calculator can plot functions: prefix line with `:` for 2D (e.g. `:sin(x)`), `::` for 3D.
 
-  1. {member} - 使用{member}可以将该内容替换为随机群员名
+  Note: use `2*x` not `2x`.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/choice (事情列表或是任意选择语句)
+/calc (expression)
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无/未标注
+  SUPERUSER
 
-- **别名**
+- **Aliases**
 
-  `选择`、 `cho`、 `决定`
+  `计算`, `cc`
 
 ---
 
-### [指令] count
+### [command] choice
 
-- **作用**
+- **Purpose**
 
-  检查一段文字所拥有的字符数量
+  Let Deon help decide. Default separator is space; for English input use commas.
 
-- **用法**
+  Deon may return different results depending on input; e.g., `1~10` returns a random number between 1 and 10.
+
+  Some global variables can be used in choice as `{xxx}`:
+
+  1. {member} - replaced with a random group member name
+
+- **Usage**
 
 ``` Text
-/count (输入的文字)
+/choice (options or choice expression)
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None / not specified
 
-- **别名**
+- **Aliases**
 
-  `字数`、 `len`、 `cou`、 `length`
+  `选择`, `cho`, `决定`
 
 ---
 
-### [指令] custom
+### [command] count
 
-- **作用**
+- **Purpose**
 
-  自定义设置工具，可以设置漂流瓶卡片皮肤等内容。
-  目前支持以下调用方法：
-  `/cus bottle` - 用于自定义漂流瓶卡片皮肤
+  Count characters in a given text.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/custom <支持的功能>
+/count (text)
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `自定义`、 `样式`、 `cus`
+  `字数`, `len`, `cou`, `length`
 
 ---
 
-### [指令] divs
+### [command] custom
 
-- **作用**
+- **Purpose**
 
-  会输出指定数字能被大于 1 的数相乘得到的最多 20 个算式
+  Customization tool (e.g., bottle card skins). Currently supports:
+  `/cus bottle` - customize drift bottle card skin
 
-- **用法**
+- **Usage**
 
 ``` Text
-/divs (数字)
+/custom <supported feature>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无/未标注
+  None
 
-- **别名**
+- **Aliases**
+
+  `自定义`, `样式`, `cus`
+
+---
+
+### [command] divs
+
+- **Purpose**
+
+  Output up to 20 factorizations of a number into factors >1.
+
+- **Usage**
+
+``` Text
+/divs (number)
+```
+
+- **Permissions/Scope**
+
+  None / not specified
+
+- **Aliases**
 
   `divides`
 
 ---
 
-### [指令] essence
+### [command] essence
 
-- **作用**
+- **Purpose**
 
-  让漠月输出一个随机精华消息（如果群里的精华消息数大于 2）。
+  Output a random `essence` message (if the group has >2 essence messages).
 
-- **用法**
+- **Usage**
 
 ``` Text
 /essence
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
   `ess`
 
 ---
 
-### [指令] furfusion
+### [command] furfusion
 
-- **作用**
+- **Purpose**
 
-  使用兽聚汇总的 API 进行各种兽聚相关的查询~
+  Use FurFusion API for various furry-gathering queries.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/furfusion <方法，不填则为兽聚倒计时>
+/furfusion <method, default shows countdown>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `兽聚汇总`、 `兽聚`、 `fus`
+  `兽聚汇总`, `兽聚`, `fus`
 
 ---
 
-### [指令] game
+### [command] game
 
-- **作用**
+- **Purpose**
 
-  游玩一个小游戏，游戏参数格式为：参数名=参数值（以逗号分隔）
-  以下是目前有的所有游戏：
-  - guess	（私聊）猜数字游戏
+  Play a mini-game. Game args are `name=value` comma-separated.
+  Available games:
+  - guess (private) - number guessing
 
-- **用法**
+- **Usage**
 
 ``` Text
-/game (小游戏名) [OPTIONS]
+/game (game name) [OPTIONS]
 OPTIONS:
-	-h, --help	查看帮助
-	-a, --args	指定小游戏的参数，示例：/game -a (小游戏参数列表)
-	-i, --info	查看你输入的小游戏的帮助而不是游玩
+    -h, --help	Show help
+    -a, --args	Specify game args, example: /game -a (arg list)
+    -i, --info	Show help for the specified game instead of playing
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无/未标注
+  None / not specified
 
-- **别名**
+- **Aliases**
 
-  `游戏`、 `小游戏`、 `play`、 `玩`、 `gm`
+  `游戏`, `小游戏`, `play`, `玩`, `gm`
 
 ---
 
-### [指令] help
+### [command] help
 
-- **作用**
+- **Purpose**
 
-  显示帮助，或某个功能的帮助，功能名填写数字就是是翻到数字所指的页数哦
+  Show help or feature help. If the feature argument is a number, it will turn to that page.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/help <功能名>
+/help <feature>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `usage`、 `docs`、 `帮助`、 `h`
+  `usage`, `docs`, `帮助`, `h`
 
 ---
 
-### [指令] httpcode
+### [command] httpcode
 
-- **作用**
+- **Purpose**
 
-  获取 http 状态码信息和它的猫猫图
+  Get HTTP status code info and its cat image.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/httpcode <状态码>
+/httpcode <status code>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无/未标注
+  None / not specified
 
-- **别名**
+- **Aliases**
 
-  `http`、 `http状态码`
+  `http`, `http状态码`
 
 ---
 
-### [指令] 今日鉴毛
+### [command] 今日鉴毛
 
-- **作用**
+- **Purpose**
 
-  随机返回一张《今日鉴毛》图片
+  Randomly return an image from `Today's Inspection`.
 
-- **用法**
+- **Usage**
 
 ``` Text
 /今日鉴毛
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `鉴毛`、 `jianmao`、 `jrjm`
+  `鉴毛`, `jianmao`, `jrjm`
 
 ---
 
-### [插件] 今日老婆
+### [plugin] Today's Wife
 
-- **作用**
+- **Purpose**
 
-  查看自己的今日群老婆，或者是别人的今日群老婆
-  注意：这个功能仅供娱乐 uwu
+  View your or others' `today's wife` in the group (for fun).
 
-- **指令列表：**
+- **Commands:**
 
     #### wife
 
-  - **作用**
+  - **Purpose**
 
-    查看自己或别人的今日群老婆，参数填写 at 会同时 at 你今日的群老婆~
+    View your or someone else's today's wife. If you @ someone, it will also @ your today's wife.
 
-  - **用法**
+  - **Usage**
 
   ```Text
-  /wife <at想看的人>
+  /wife <@target>
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    0. **在群内使用**
+    0. **Use in group only**
 
-  - **别名**
+  - **Aliases**
 
-    `今日老婆`、 `kklp`、 `看看老婆`、 `w`。
+    `今日老婆`, `kklp`, `看看老婆`, `w`.
 
   ---
 
+### [command] jrrp
 
-### [指令] jrrp
+- **Purpose**
 
-- **作用**
+  View today's luck for a QQ number or group member ranking. Integer param: positive shows best rank, negative shows worst. `avg` for group average.
 
-  查看当前 qq 号今日的人品或群友人品排名~
-  参数填写整数，正数为人品最高排名，负数为最低。填写 avg 为群员平均值
-
-- **用法**
+- **Usage**
 
 ``` Text
-/jrrp jrrp <参数>
+/jrrp jrrp <param>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无/未标注
+  None / not specified
 
-- **别名**
+- **Aliases**
 
-  `今日人品`、 `luck`
+  `今日人品`, `luck`
 
 ---
 
-### [指令] location
+### [command] location
 
-- **作用**
+- **Purpose**
 
-  查看或绑定你的城市及地区，用于更方便地进行天气查询等功能。
+  View or bind your city/region for easier weather queries.
 
-  解绑可使用 `/loc clear` 或 `/loc unbind`
+  Unbind with `/loc clear` or `/loc unbind`
 
-- **用法**
+- **Usage**
 
 ``` Text
-/location (地点)
+/location (place)
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `绑定位置`、 `设置位置`、 `定位`、 `loc`
+  `绑定位置`, `设置位置`, `定位`, `loc`
 
 ---
 
-### [指令] lotluck
+### [command] lotluck
 
-- **作用**
+- **Purpose**
 
-  花费 5 枚星币抽取一个来自东京浅草寺的签。
+  Spend 5 coins to draw an omikuji from Asakusa, Tokyo.
 
-- **用法**
+- **Usage**
 
 ``` Text
 /lotluck
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `抽签`、 `求签`、 `签`
+  `抽签`, `求签`, `签`
 
 ---
 
-### [指令] machine
+### [command] machine
 
-- **作用**
+- **Purpose**
 
-  一个神秘的机器，查看它会发生什么呢？（未做完）
+  A mysterious machine — see what happens when you view it (WIP).
 
-- **用法**
+- **Usage**
 
 ``` Text
 /machine
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `magic`、 `mag`、 `神秘机器`
+  `magic`, `mag`, `神秘机器`
 
 ---
 
-### [指令] maifriend
+### [command] maifriend
 
-- **作用**
+- **Purpose**
 
-  生成自己或指定群友的旅行伙伴图
+  Generate a travel partner image for you or a specified group member.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/maifriend <at 用户>
+/maifriend <@user>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `旅行伙伴`、 `maif`
+  `旅行伙伴`, `maif`
 
 ---
 
-### [指令] peek
+### [command] peek
 
-- **作用**
+- **Purpose**
 
-  查看 bot 当前运行实例的电脑屏幕信息，参数填写显示器序号，填写 0 则是所有显示器
+  View the host machine's screen info; pass monitor index; 0 means all monitors.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/peek <显示器序号>
+/peek <monitor index>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  在可视奸的群组内
+  In groups allowed for peeking
 
-- **别名**
+- **Aliases**
 
-  `视奸`、 `视奸179`、 `peekbot`
+  `视奸`, `视奸179`, `peekbot`
 
 ---
 
-### [指令] peek179
+### [command] peek179
 
-- **作用**
+- **Purpose**
 
-  返回一张 179 出毛的返图
+  Return a specific 179 image.
 
-- **用法**
+- **Usage**
 
 ``` Text
 /peek179
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `peek99`、 `kk99`、 `kk179`
+  `peek99`, `kk99`, `kk179`
 
 ---
 
-### [插件] 漂流瓶
+### [plugin] Drift Bottle
 
-- **作用**
+- **Purpose**
 
-  扔/捡来自各个群组的漂流瓶。每人每小时可以捡 30 个
-  神秘力量入侵了大海...现在每捡一次漂流瓶都会让它更加混乱，也更容易碎掉...但是点赞可以让混乱值变少
+  Throw or pick drift bottles from various groups. Each user can pick 30 per hour.
+  Mysterious force has invaded the sea... each pick increases chaos and fragility, but likes reduce chaos.
 
-- **指令列表：**
+- **Commands:**
 
     #### throw
 
-  - **作用**
+  - **Purpose**
 
-    扔一个漂流瓶（文本和图片）
+    Throw a bottle (text and image).
 
-  - **用法**
+  - **Usage**
 
   ```Text
-  /throw (瓶子内容)
+  /throw (bottle content)
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    0. **在群内使用**
+    0. **Use in group only**
 
-  - **别名**
+  - **Aliases**
 
-    `扔瓶子`、 `扔漂流瓶`、 `扔瓶`。
+    `扔瓶子`, `扔漂流瓶`, `扔瓶`.
 
   ---
 
   #### pickup
 
-  - **作用**
+  - **Purpose**
 
-    尝试捡一个漂流瓶
+    Try to pick a bottle.
 
-  - **用法**
+  - **Usage**
 
   ```Text
   /pickup
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    0. **无/未标注**
+    0. **None / not specified**
 
-  - **别名**
+  - **Aliases**
 
-    `捡瓶子`、 `捡漂流瓶`、 `捡瓶`、 `pick`、 `p`。
+    `捡瓶子`, `捡漂流瓶`, `捡瓶`, `pick`, `p`.
 
   ---
 
   #### seek
 
-  - **作用**
+  - **Purpose**
 
-    在海中寻宝（使用 `/seek` 指令查看详细帮助）
+    Treasure hunt at sea (use `/seek` for detailed help).
 
-  - **用法**
+  - **Usage**
 
   ```Text
-  /seek <操作>
+  /seek <action>
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    0. **无/未标注**
+    0. **None / not specified**
 
-  - **别名**
+  - **Aliases**
 
-    `无`。
+    none.
 
   ---
 
+### [command] ping
 
-### [指令] ping
+- **Purpose**
 
-- **作用**
+  Returns current message latency.
 
-  发送后会返回当前的消息延迟
-
-- **用法**
+- **Usage**
 
 ``` Text
 /ping
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `echotime`、 `延迟`、 `测延迟`
+  `echotime`, `延迟`, `测延迟`
 
 ---
 
-### [指令] schtime
+### [command] schtime
 
-- **作用**
+- **Purpose**
 
-  切换是否开启报时功能，报时功能会在每天的 `0` `8` `12` `20` 点进行报时，以及会告诉一些最新版本信息或是小提示
+  Toggle hourly announcement feature. Announcements occur daily at 0, 8, 12, 20 and may include version info or tips.
 
-- **用法**
+- **Usage**
 
 ``` Text
 /schtime
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  在群聊内 & 是管理员或群主
+  In group & is admin or group owner
 
-- **别名**
+- **Aliases**
 
-  `报时`、 `stime`
-
----
-
-### [指令] schtime
-
-- **作用**
-
-  切换是否开启报时功能，报时功能会在每天的 `0` `8` `12` `20` 点进行报时，以及会告诉一些最新版本信息或是小提示
-
-- **用法**
-
-``` Text
-/schtime
-```
-
-- **权限/可用范围**
-
-  在群聊内 & 是管理员或群主
-
-- **别名**
-
-  `报时`、 `stime`
+  `报时`, `stime`
 
 ---
 
-### [指令] setu
+### [command] setu
 
-- **作用**
+- **Purpose**
 
-  发送一张涩图？（其实是彩虹蟑螂）
+  Send a `setu` image? (actually rainbow cockroach)
 
-- **用法**
+- **Usage**
 
 ``` Text
 /setu
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `涩图`、 `setu`、 `色图`
+  `涩图`, `setu`, `色图`
 
 ---
 
-### [指令] shop
+### [command] shop
 
-- **作用**
+- **Purpose**
 
-  使用星币购买各种物品的商店
-  参数填写物品编号可以申请购买物品，例如 `/shop a1`
+  Shop to buy items with coins. Provide item code to purchase, e.g., `/shop a1`.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/shop <物品序号>
+/shop <item code>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无/未标注
+  None / not specified
 
-- **别名**
+- **Aliases**
 
-  `星币商店`、 `商店`
+  `星币商店`, `商店`
 
 ---
 
-### [指令] status
+### [command] status
 
-- **作用**
+- **Purpose**
 
-  查看运行该 XME-Bot 实例的设备的系统状态
+  View system status of the device running this XME-Bot instance.
 
-- **用法**
+- **Usage**
 
 ``` Text
 /status
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `系统状态`、 `stats`
+  `系统状态`, `stats`
 
 ---
 
-### [指令] tip
+### [command] tip
 
-- **作用**
+- **Purpose**
 
-  使用时，漠月会发送一条 tip
+  Deon will send a tip when used.
 
-- **用法**
+- **Usage**
 
 ``` Text
-/tip <提示数>
+/tip <tip number>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
   `提示`
 
 ---
 
-### [指令] title
+### [command] title
 
-- **作用**
+- **Purpose**
 
-  为一个群员设置指定的头衔（需要 bot 是群主哦）
+  Set a title for a group member (requires bot to be group owner).
 
-- **用法**
+- **Usage**
 
 ``` Text
-/title (at想要设置的群友) (头衔名 填写 -delete 删除头衔)
+/title ( @member to set ) (title name, use -delete to remove)
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  是管理员 或 是 SUPERUSER & 在群组里
+  Is admin OR SUPERUSER & in group
 
-- **别名**
+- **Aliases**
 
-  `set_title`、 `设置头衔`、 `头衔`
+  `set_title`, `设置头衔`, `头衔`
 
 ---
 
-### [插件] 骰子
+### [plugin] Dice
 
-- **作用**
+- **Purpose**
 
-  自定义面数or规则的骰子
+  Custom-sided or rule-based dice.
 
-- **指令列表：**
+- **Commands:**
 
     #### dice
 
-  - **作用**
+  - **Purpose**
 
-    投指定面数 * 指定数量的骰子
+    Roll dice with specified sides * quantity.
 
-  - **用法**
+  - **Usage**
 
   ```Text
-  /dice (骰子面数) <骰子数量>
+  /dice (sides) <quantity>
   ```
 
-  - **权限/可用范围**
+  - **Permissions/Scope**
 
-    0. **无/未标注**
+    0. **None / not specified**
 
-  - **别名**
+  - **Aliases**
 
-    `d`、 `rd`、 `骰子`。
+    `d`, `rd`, `骰子`.
 
   ---
 
+### [command] weather
 
-### [指令] weather
+- **Purpose**
 
-- **作用**
+  Check weather for a location; limited to five times per 5 minutes.
 
-  查看指定地区的天气，每 5 分钟限制五次
-
-- **用法**
+- **Usage**
 
 ``` Text
-/weather <地点名> [OPTIONS]
+/weather <location name> [OPTIONS]
 OPTIONS:
-	-h, --help	输出帮助，等同于 `/help weather`
-	-w, --warn	单独使用这个参数以查看预警详细信息
+    -h, --help	Output help, equivalent to `/help weather`
+    -w, --warn	Use this option alone to view detailed warnings
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `当前天气`、 `天气`、 `查看天气`、 `wea`
+  `当前天气`, `天气`, `查看天气`, `wea`
 
 ---
 
-### [指令] whoru
+### [command] whoru
 
-- **作用**
+- **Purpose**
 
-  查看 xme-bot 当前使用的角色~
+  View the current role that xme-bot is using.
 
-- **用法**
+- **Usage**
 
 ``` Text
 /whoru
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
   `whoareuy`
 
 ---
 
-### [指令] xmeposts
+### [command] xmeposts
 
-- **作用**
+- **Purpose**
 
-  通过 RSS 订阅并查看九九最近的 n 个文章，默认 1 个
+  Subscribe via RSS and view the latest n posts by 九九 (default 1).
 
-- **用法**
+- **Usage**
 
 ``` Text
-/xmeposts <文章数>
+/xmeposts <number of posts>
 ```
 
-- **权限/可用范围**
+- **Permissions/Scope**
 
-  无
+  None
 
-- **别名**
+- **Aliases**
 
-  `九九文章`、 `rss179`、 `posts179`、 `blogposts`、 `posts`、 `post`
+  `九九文章`, `rss179`, `posts179`, `blogposts`, `posts`, `post`
 
 ---
