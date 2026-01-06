@@ -4,7 +4,12 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
     title: "XME-Bot Docs",
     description: "XME-Bot Docs",
+    head: [["link", { rel: "icon", href: "https://image.179.life/images/icon.ico" }]],
+    lang: "zh-CN",
+    cleanUrls: true,
+    lastUpdated: true,
     themeConfig: {
+        externalLinkIcon: true,
         logo: "https://image.179.life/images/deon/icon.webp",
         search: {
             provider: "local",
@@ -29,12 +34,22 @@ export default defineConfig({
                 },
             },
         },
+        outline: {
+            level: [2, 4],
+        },
     },
     locales: {
         root: {
             label: "简体中文",
             lang: "zh-cn",
             themeConfig: {
+                lastUpdated: {
+                    text: "最后更新于",
+                    formatOptions: {
+                        dateStyle: "full",
+                        timeStyle: "medium",
+                    },
+                },
                 nav: [
                     { text: "首页", link: "/" },
                     { text: "使用文档", link: "/glossary" },
@@ -68,8 +83,11 @@ export default defineConfig({
                     copyright: "Copyright © 2024-present xzadudu179",
                 },
                 editLink: {
-                    pattern: "https://github.com/xzadudu179/XME-Bot-Docs-New/docs/:path",
+                    pattern: "https://github.com/xzadudu179/XME-Bot-Docs-New/blob/main/docs/:path",
                     text: "在 Github 上编辑该页面",
+                },
+                outline: {
+                    label: "页面导航",
                 },
             },
         },
@@ -77,20 +95,35 @@ export default defineConfig({
             label: "English",
             lang: "en",
             themeConfig: {
+                lastUpdated: {
+                    text: "Last Updated at",
+                    formatOptions: {
+                        dateStyle: "full",
+                        timeStyle: "medium",
+                    },
+                },
                 nav: [
-                    { text: "Home", link: "/" },
-                    { text: "Document", link: "/glossary" },
+                    { text: "Home", link: "/en/" },
+                    { text: "Document", link: "/en/glossary" },
                     { text: "Sponsor", link: "https://afdian.com/a/xzadudu179" },
                     { text: "Feedback", link: "https://github.com/xzadudu179/XME-bot-qq/issues/new" },
                 ],
 
                 sidebar: [
                     {
-                        text: "Examples",
+                        text: "Documents",
                         items: [
-                            { text: "Markdown Examples", link: "/markdown-examples" },
-                            { text: "Runtime API Examples", link: "/api-examples" },
+                            { text: "Glossary", link: "/en/glossary" },
+                            { text: "Commands List", link: "/en/help" },
                         ],
+                    },
+                    {
+                        text: "Create BOT Instance",
+                        items: [{ text: "Get Started", link: "/en/get_started" }],
+                    },
+                    {
+                        text: "Others",
+                        items: [{ text: "Other", link: "/en/other" }],
                     },
                 ],
                 socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],

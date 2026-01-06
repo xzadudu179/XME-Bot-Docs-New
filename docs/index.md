@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "XME-Deon-Bot"
-  text: "多功能娱乐型 QQ Bot"
+  text: "基于 Nonebot1 实现的多功能娱乐型 QQ Bot"
   actions:
     - theme: brand
       text: 使用文档

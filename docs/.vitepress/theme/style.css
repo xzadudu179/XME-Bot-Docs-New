@@ -43,9 +43,14 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
+* {
+    transition: background-color, color 0.3s;
+    /* background-color: #fff; */
+}
+
 :root {
-    --primary-1: oklch(0.656 0.1447 55.51);
-    --primary-2: oklch(0.626 0.1447 55.51);
+    --primary-1: oklch(0.686 0.1447 55.51);
+    --primary-2: oklch(0.636 0.1447 55.51);
     --primary-3: oklch(0.586 0.1407 55.51);
     --primary-soft: #e0823734;
 }
