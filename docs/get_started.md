@@ -5,5 +5,3 @@
 :::
 
 XME-Deon-Bot 使用 [NapCat](https://napneko.github.io/) 或任意支持 [Onebot V11 协议](https://github.com/botuniverse/onebot-11)的 NTQQ 协议实现作为 QQ 实例
-
-

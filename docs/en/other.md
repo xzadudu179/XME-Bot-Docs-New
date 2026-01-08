@@ -61,7 +61,7 @@ If you're curious, you can read 九镹's personal intro here: [https://blog.xzad
 | 10   | 假设作者是晓拾捌    | afdian  | ￥5     |
 | 11   | 爱发电用户_f7735    | afdian  | ￥5     |
 
-## QR Code for Sponsoring (？)
+## QR Code for Sponsoring
 
 ![QR Code](../images/qr.jpg)
 
