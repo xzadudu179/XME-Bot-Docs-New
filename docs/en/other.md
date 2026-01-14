@@ -50,16 +50,15 @@ If you're curious, you can read 九镹's personal intro here: [https://blog.xzad
 | Rank | Name                | Channel | Amount |
 | ---- | ------------------- | ------- | ------ |
 | 1    | Aminya              | wx      | ￥179   |
-| 2    | 磷钼六方晶          | wx      | ￥50    |
+| 2    | 磷钼六方晶          | wx      | ￥70    |
 | 3    | QQ（咖啡机/饮料机） | wx      | ￥30    |
-| 4    | Note: 饭饭~喂~！    | wx      | ￥20    |
-| 5    | Asolarium           | afdian  | ￥15    |
-| 6    | 爱发电用户_c31cc    | afdian  | ￥15    |
-| 7    | 是紫陌啊            | afdian  | ￥10    |
-| 8    | 夜茗                | afdian  | ￥10    |
-| 9    | 硫煞Sulfury         | afdian  | ￥5     |
-| 10   | 假设作者是晓拾捌    | afdian  | ￥5     |
-| 11   | 爱发电用户_f7735    | afdian  | ￥5     |
+| 4    | Asolarium           | afdian  | ￥15    |
+| 5    | 爱发电用户_c31cc    | afdian  | ￥15    |
+| 6    | 是紫陌啊            | afdian  | ￥10    |
+| 7    | 夜茗                | afdian  | ￥10    |
+| 8    | 硫煞Sulfury         | afdian  | ￥5     |
+| 9    | 假设作者是晓拾捌    | afdian  | ￥5     |
+| 10   | 爱发电用户_f7735    | afdian  | ￥5     |
 
 ## QR Code for Sponsoring
 
