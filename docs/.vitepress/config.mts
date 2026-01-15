@@ -66,6 +66,7 @@ export default defineConfig({
                         items: [
                             { text: "术语表", link: "/glossary" },
                             { text: "指令列表", link: "/help" },
+                            { text: "API", link: "/apis" },
                         ],
                     },
                     {
@@ -115,6 +116,7 @@ export default defineConfig({
                         items: [
                             { text: "Glossary", link: "/en/glossary" },
                             { text: "Commands List", link: "/en/help" },
+                            { text: "API", link: "/en/apis" },
                         ],
                     },
                     {
