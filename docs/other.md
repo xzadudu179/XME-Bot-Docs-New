@@ -56,9 +56,10 @@ next:
 | 5    | 爱发电用户_c31cc    | afdian | ￥15  |
 | 6    | 是紫陌啊            | afdian | ￥10  |
 | 7    | 夜茗                | afdian | ￥10  |
-| 8    | 硫煞Sulfury         | afdian | ￥5   |
-| 9   | 假设作者是晓拾捌    | afdian | ￥5   |
-| 10   | 爱发电用户_f7735    | afdian | ￥5   |
+| 8    | 爱发电用户cb6c6 (衍) | afdian | ￥5  |
+| 9    | 硫煞Sulfury         | afdian | ￥5   |
+| 10   | 假设作者是晓拾捌    | afdian | ￥5   |
+| 11   | 爱发电用户_f7735    | afdian | ￥5   |
 
 ## 二维码投喂（？）
 
