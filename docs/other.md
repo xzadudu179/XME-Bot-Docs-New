@@ -53,9 +53,9 @@ next:
 | 2    | 磷钼六方晶          | wx     | ￥70  |
 | 3    | 铁锅炖汤圆         | zfb     | ￥50  |
 | 4    | QQ（咖啡机/饮料机） | wx     | ￥30  |
+| 9    | 爱发电用户cb6c6 (衍) | afdian | ￥20  |
 | 5    | Asolarium           | afdian | ￥15  |
 | 6    | 爱发电用户_c31cc    | afdian | ￥15  |
-| 9    | 爱发电用户cb6c6 (衍) | afdian | ￥10  |
 | 7    | 是紫陌啊            | afdian | ￥10  |
 | 8    | 夜茗                | afdian | ￥10  |
 | 10    | 硫煞Sulfury         | afdian | ￥5   |
