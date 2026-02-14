@@ -23,12 +23,12 @@ For example:
 Specifically, using **@bot** in a command or typing the bot's name before the command can also invoke the command, for example:
 
 ``` Text
-漠月 /weather 南京建邺
-@漠月 /weather 南京建邺
+deon /weather 南京建邺
+@deon /weather 南京建邺
 ```
 
 :::warning
-Due to the Nonebot1 framework itself, if @bot appears in [command arguments](#args), the first argument will be ignored. For example: `/info @漠月` will be parsed by the framework as `/info`. If you need the content of `/info @漠月`, you should use `/info @漠月 @漠月`
+Due to the Nonebot1 framework itself, if @bot appears in [command arguments](#args), the first argument will be ignored. For example: `/info @deon` will be parsed by the framework as `/info`. If you need the content of `/info @deon`, you should use `/info @deon @deon`
 :::
 
 When XME-Bot receives the above message it will reply with something like:
@@ -92,10 +92,10 @@ Required arguments in this document are shown enclosed in `()`.
 For example:
 
 ``` Text
-/kklp (@a group member)
+/count (input text)
 ```
 
-Here `@a group member` is a required argument; if the argument is empty, XME-Bot will prompt the user to enter the argument and the command cannot be used without it.
+Here `input text` is a required argument; if the argument is empty, XME-Bot will prompt the user to enter the argument and the command cannot be used without it.
 
 ### Shell-like options
 
