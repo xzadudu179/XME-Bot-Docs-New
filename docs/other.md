@@ -72,3 +72,5 @@ next:
 ::: tip
 记得在付款时备注 qq 号和用户名哦，方便我加到鸣谢列表（？
 :::
+
+![漠月](https://image.179.life/images/deon/deon-cake.webp)

@@ -4,6 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
     title: "XME-Bot Docs",
     description: "XME-Bot Docs",
+    base: '/',
     head: [["link", { rel: "icon", href: "https://image.179.life/images/icon.ico" }]],
     lang: "zh-CN",
     cleanUrls: true,

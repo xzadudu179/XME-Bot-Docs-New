@@ -72,3 +72,5 @@ If you're curious, you can read 九镹's personal intro here: [https://blog.xzad
 ::: tip
 When making a payment, please note your QQ number and username so I can add you to the thanks list。
 :::
+
+![Deon](https://image.179.life/images/deon/deon-cake.webp)
