@@ -65,12 +65,10 @@ If you're curious, you can read 九镹's personal intro here: [https://blog.xzad
 | 14   | 假设作者是晓拾捌      | afdian  | ￥5     |
 | 15   | 爱发电用户_f7735      | afdian  | ￥5     |
 
-## QR Code for Sponsoring
+## Sponsoring
 
-![QR Code](../images/qr.jpg)
-
-::: tip
-When making a payment, please note your QQ number and username so I can add you to the thanks list。
-:::
+<a href="https://afdian.com/a/xzadudu179" >
+<img width="200" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png" style="margin-top: 30px" alt=""/>
+</a>
 
 ![Deon](https://image.179.life/images/deon/deon-cake.webp)

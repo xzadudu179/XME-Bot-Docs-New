@@ -47,30 +47,40 @@ next:
 - (afdian) 假设作者是晓拾捌 ￥5
 - (afdian) 爱发电用户_f7735 ￥5 -->
 
-| 排名 | 用户名              | 渠道   | 金额 |
-| ---- | ------------------- | ------ | ---- |
-| 1    | Aminya              | wx     | ￥179 |
-| 2    | 路人甲           | afdian     | ￥100  |
-| 3    | 磷钼六方晶           | wx     | ￥70  |
-| 4    | 夜茗                | afdian | ￥60  |
-| 5    | 白糖               | afdian     | ￥50  |
-| 6    | 铁锅炖汤圆          | zfb     | ￥50  |
+| 排名 | 用户名                | 渠道   | 金额 |
+| ---- | --------------------- | ------ | ---- |
+| 1    | Aminya                | wx     | ￥179 |
+| 2    | 路人甲                | afdian | ￥100 |
+| 3    | 磷钼六方晶            | wx     | ￥70  |
+| 4    | 夜茗                  | afdian | ￥60  |
+| 5    | 白糖                  | afdian | ￥50  |
+| 6    | 铁锅炖汤圆            | zfb    | ￥50  |
 | 7    | QQ（咖啡机/饮料机  ） | wx     | ￥30  |
-| 8    | 爱发电用户cb6c6 (衍) | afdian | ￥20  |
-| 9    | Asolarium           | afdian | ￥15  |
-| 10    | 爱发电用户_c31cc     | afdian | ￥15  |
-| 11    | 是紫陌啊             | afdian | ￥10  |
-| 12    | 爱发电用户_96c93         | afdian | ￥5   |
-| 13    | 硫煞Sulfury         | afdian | ￥5   |
+| 8    | 爱发电用户cb6c6 (衍)  | afdian | ￥20  |
+| 9    | Asolarium             | afdian | ￥15  |
+| 10   | 爱发电用户_c31cc      | afdian | ￥15  |
+| 11   | 是紫陌啊              | afdian | ￥10  |
+| 12   | 爱发电用户_96c93      | afdian | ￥5   |
+| 13   | 硫煞Sulfury           | afdian | ￥5   |
 | 14   | 假设作者是晓拾捌      | afdian | ￥5   |
-| 15   | 爱发电用户_f7735     | afdian | ￥5   |
+| 15   | 爱发电用户_f7735      | afdian | ￥5   |
 
-## 二维码投喂（？）
+## 投喂九九！
+
+~~获得的收益全都会让漠月拿去买饼干~~~~~~~！！！！下滑以查看买到饼干的漠月~~
+
+### 爱发电
+
+<a href="https://afdian.com/a/xzadudu179" >
+<img width="200" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png" style="margin-top: 30px" alt=""/>
+</a>
+
+### 二维码投喂（？）
 
 ![收款码](./images/qr.jpg)
 
 ::: tip
-记得在付款时备注 qq 号和用户名哦，方便我加到鸣谢列表（？
+二维码投喂没有手续费但是需要单独提醒我，以及备注一下 qq 方便我加到鸣谢列表和以后的活动里（？
 :::
 
 ![漠月](https://image.179.life/images/deon/deon-cake.webp)
