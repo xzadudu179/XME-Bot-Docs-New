@@ -51,19 +51,20 @@ next:
 | ---- | --------------------- | ------ | ---- |
 | 1    | QQ（咖啡机/饮料机  ） | wx/afdian  | ￥180  |
 | 2    | Aminya                | wx     | ￥179 |
-| 3    | 磷钼六方晶            | wx     | ￥70  |
-| 4    | 夜茗                  | afdian | ￥60  |
-| 5    | 白糖                  | afdian | ￥50  |
-| 6    | 铁锅炖汤圆            | zfb    | ￥50  |
-| 7    | 爱发电用户cb6c6 (衍)  | afdian | ￥20  |
-| 8    | Asolarium             | afdian | ￥15  |
-| 9   | 爱发电用户_c31cc      | afdian | ￥15  |
-| 10   | 是紫陌啊              | afdian | ￥10  |
-| 11   | 环.虬凌dragon      | afdian | ￥5   |
-| 12   | 爱发电用户_96c93      | afdian | ￥5   |
-| 13   | 硫煞Sulfury           | afdian | ￥5   |
-| 14   | 假设作者是晓拾捌      | afdian | ￥5   |
-| 15   | 爱发电用户_f7735      | afdian | ￥5   |
+| 3    | 尘辉®                 | zfb     | ￥100  |
+| 4    | 磷钼六方晶            | wx     | ￥70  |
+| 5    | 夜茗                  | afdian | ￥60  |
+| 6    | 白糖                  | afdian | ￥50  |
+| 7    | 铁锅炖汤圆            | zfb    | ￥50  |
+| 8    | 爱发电用户cb6c6 (衍)  | afdian | ￥20  |
+| 9    | Asolarium             | afdian | ￥15  |
+| 10   | 爱发电用户_c31cc      | afdian | ￥15  |
+| 11   | 是紫陌啊              | afdian | ￥10  |
+| 12   | 环.虬凌dragon      | afdian | ￥5   |
+| 13   | 爱发电用户_96c93      | afdian | ￥5   |
+| 14   | 硫煞Sulfury           | afdian | ￥5   |
+| 15   | 假设作者是晓拾捌      | afdian | ￥5   |
+| 16   | 爱发电用户_f7735      | afdian | ￥5   |
 
 ## 投喂九九！
 
