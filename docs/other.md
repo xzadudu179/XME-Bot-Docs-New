@@ -59,12 +59,13 @@ next:
 | 8    | 爱发电用户cb6c6 (衍)  | afdian | ￥20  |
 | 9    | Asolarium             | afdian | ￥15  |
 | 10   | 爱发电用户_c31cc      | afdian | ￥15  |
-| 11   | 是紫陌啊              | afdian | ￥10  |
-| 12   | 环.虬凌dragon      | afdian | ￥5   |
-| 13   | 爱发电用户_96c93      | afdian | ￥5   |
-| 14   | 硫煞Sulfury           | afdian | ￥5   |
-| 15   | 假设作者是晓拾捌      | afdian | ￥5   |
-| 16   | 爱发电用户_f7735      | afdian | ￥5   |
+| 11   | 爱发电用户_e3288      | afdian | ￥15  |
+| 12   | 是紫陌啊              | afdian | ￥10  |
+| 13   | 环.虬凌dragon      | afdian | ￥5   |
+| 14   | 爱发电用户_96c93      | afdian | ￥5   |
+| 15   | 硫煞Sulfury           | afdian | ￥5   |
+| 16   | 假设作者是晓拾捌      | afdian | ￥5   |
+| 17   | 爱发电用户_f7735      | afdian | ￥5   |
 
 ## 投喂九九！
 
