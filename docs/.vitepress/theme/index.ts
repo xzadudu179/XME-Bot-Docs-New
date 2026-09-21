@@ -3,6 +3,7 @@ import { h } from "vue";
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import NotFound from "./NotFound.vue";
+import XmeCommands from "./components/XmeCommands.vue";
 import "./style.css";
 
 export default {
@@ -13,7 +14,7 @@ export default {
             "not-found": () => h(NotFound),
         });
     },
-    enhanceApp({ app, router, siteData }) {
-        // ...
+    enhanceApp({ app }) {
+        app.component("XmeCommands", XmeCommands);
     },
 } satisfies Theme;
