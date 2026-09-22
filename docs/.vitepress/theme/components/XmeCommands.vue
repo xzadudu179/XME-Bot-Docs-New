@@ -1,16 +1,56 @@
+<script lang="ts">
+import { inBrowser } from "vitepress";
+
+/**
+ * 指令文档的源地址，接口会实时更新，所以运行时不重新构建也能拿到最新指令。
+ * 该接口需要返回 `Access-Control-Allow-Origin` 才能被浏览器跨域读取。
+ */
+const DOCS_API = "https://api.xmebot.com/docs.md";
+const DOCS_CONTENT = "https://api.xmebot.com/docs";
+
+/**
+ * 模块级缓存：一个页面生命周期内只请求一次，来回到「指令列表」都复用同一份数据，
+ * 只有刷新页面才会重新请求。
+ *
+ * 注意：这段代码必须放在普通 <script> 块里。`<script setup>` 的顶层代码是
+ * **每个组件实例**都会执行的，那样缓存会随组件重建而失效。
+ */
+let pendingRequest: Promise<string> | null = null;
+
+function loadCommandsMarkdown(): Promise<string> {
+    if (!pendingRequest) {
+        pendingRequest = fetch(DOCS_API, { cache: "no-store" })
+            .then((res) => {
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                return res.text();
+            })
+            .then((text) => {
+                if (!text.trim()) throw new Error("返回内容为空");
+                return text;
+            })
+            .catch((err) => {
+                // 失败不留缓存，下次进入本页可以重试
+                pendingRequest = null;
+                throw err;
+            });
+    }
+    return pendingRequest;
+}
+
+// 进入站点即预取：本模块随主题包在主包初始化时求值，不必等点到「指令列表」才开始请求
+if (inBrowser) {
+    loadCommandsMarkdown().catch(() => {
+        // 失败交给组件的错误态展示，这里吞掉避免未处理的 rejection
+    });
+}
+</script>
+
 <script setup lang="ts">
 import { nextTick, onMounted, ref } from "vue";
 import MarkdownIt from "markdown-it";
 // @ts-ignore 内部模块没有类型声明；vitepress 的 exports 字段允许按 dist/* 路径引入。
 // 用命名空间导入，这样即使将来该导出改名，也只是目录缺条目而不会让构建失败。
 import * as vitepressAppUtils from "vitepress/dist/client/app/utils.js";
-
-/**
- * 指令文档的源地址，每次访问页面时都会重新拉取，因此 bot 更新指令后无需重新构建站点。
- * 该接口需要返回 `Access-Control-Allow-Origin` 才能被浏览器跨域读取。
- */
-const DOCS_API = "https://api.xmebot.com/docs.md";
-const DOCS_CONTENT = "https://api.xmebot.com/docs";
 
 const md = new MarkdownIt({ linkify: true });
 
@@ -88,12 +128,7 @@ function refreshPageOutline() {
 
 onMounted(async () => {
     try {
-        const res = await fetch(DOCS_API, { cache: "no-store" });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const text = await res.text();
-        if (!text.trim()) throw new Error("返回内容为空");
-
-        html.value = md.render(text);
+        html.value = md.render(await loadCommandsMarkdown());
     } catch (err) {
         error.value = err instanceof Error ? err.message : String(err);
     } finally {

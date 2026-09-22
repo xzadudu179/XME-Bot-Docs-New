@@ -1,9 +1,8 @@
 <script setup>
-import { ref, watch } from 'vue';
+import { onMounted, ref } from 'vue';
 import { MorphIcon } from "morphicons/vue";
 import { X } from "lucide"
 
-const hostname = window.location.hostname;
 const showBanner = ref(true);
 
 function CloseBanner() {
@@ -13,6 +12,8 @@ function CloseBanner() {
 
 function SetBannerClosed() {
     showBanner.value = false;
+    // 预渲染发生在 Node 里，没有 document
+    if (typeof document === "undefined") return;
     document.documentElement.style.setProperty(
         "--banner-height",
         "0px"
@@ -23,13 +24,19 @@ function SetBannerClosed() {
     )
 }
 
-// 预渲染发生在 Node 里，没有 localStorage，这里要判一下，否则每次构建都会报错
-if (typeof localStorage !== "undefined" && localStorage.getItem("bannerClosed")) {
-    SetBannerClosed();
-}
-console.log(showBanner.value)
-if (hostname != "docs.xme.179.life")
-    SetBannerClosed();
+// 预渲染阶段既没有 localStorage 也没有 location，所以这两个判断都放在客户端挂载后执行。
+// 放在 setup 顶层的话，首屏 HTML 与客户端首次渲染会不一致（hydrate 不匹配），
+// 而且读 window 会直接让 Node 预渲染报错。
+onMounted(() => {
+    if (localStorage.getItem("bannerClosed")) {
+        SetBannerClosed();
+        return;
+    }
+    // 这段迁移提示只对旧域名有意义，新域名上不展示
+    if (window.location.hostname !== "docs.xme.179.life") {
+        SetBannerClosed();
+    }
+});
 </script>
 
 <style>

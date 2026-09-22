@@ -7,7 +7,7 @@ import { defineConfig } from "vitepress";
  * 注意：索引本身是构建产物，所以指令更新后需要重新构建才会进入索引
  * （可用 Vercel Deploy Hook 或定时任务自动触发，无需手动操作）。
  */
-const DOCS_API = "https://xme-api.xzadudu179.top/docs.md";
+const DOCS_API = "https://api.xmebot.com/docs.md";
 const COMMANDS_PAGE = "help.md";
 
 type SearchRenderEnv = {
