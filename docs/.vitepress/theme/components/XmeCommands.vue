@@ -9,8 +9,8 @@ import * as vitepressAppUtils from "vitepress/dist/client/app/utils.js";
  * 指令文档的源地址，每次访问页面时都会重新拉取，因此 bot 更新指令后无需重新构建站点。
  * 该接口需要返回 `Access-Control-Allow-Origin` 才能被浏览器跨域读取。
  */
-const DOCS_API = "https://xme-api.xzadudu179.top/docs.md";
-const DOCS_CONTENT = "https://xme-api.xzadudu179.top/docs";
+const DOCS_API = "https://api.xmebot.com/docs.md";
+const DOCS_CONTENT = "https://api.xmebot.com/docs";
 
 const md = new MarkdownIt({ linkify: true });
 
