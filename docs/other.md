@@ -49,23 +49,24 @@ next:
 
 | 排名 | 用户名                | 渠道   | 金额 |
 | ---- | --------------------- | ------ | ---- |
-| 1    | QQ（咖啡机/饮料机  ） | wx/afdian  | ￥180  |
-| 2    | Aminya                | wx     | ￥179 |
-| 3    | 尘辉®                 | zfb     | ￥100  |
-| 4    | 磷钼六方晶            | wx     | ￥70  |
-| 5    | 夜茗                  | afdian | ￥60  |
-| 6    | 白糖                  | afdian | ￥50  |
-| 7    | 铁锅炖汤圆            | zfb    | ￥50  |
-| 8    | 爱发电用户cb6c6 (衍)  | afdian | ￥20  |
-| 9    | Asolarium             | afdian | ￥15  |
-| 10   | 爱发电用户_c31cc      | afdian | ￥15  |
-| 11   | 爱发电用户_e3288      | afdian | ￥15  |
-| 12   | 是紫陌啊              | afdian | ￥10  |
-| 13   | 环.虬凌dragon      | afdian | ￥5   |
-| 14   | 爱发电用户_96c93      | afdian | ￥5   |
-| 15   | 硫煞Sulfury           | afdian | ￥5   |
-| 16   | 假设作者是晓拾捌      | afdian | ￥5   |
-| 17   | 爱发电用户_f7735      | afdian | ￥5   |
+| 1    | 冬莱_Furry           | afdian | ￥256  |
+| 2    | QQ（咖啡机/饮料机  ） | wx/afdian  | ￥180  |
+| 3    | Aminya                | wx     | ￥179 |
+| 4    | 尘辉®                 | zfb     | ￥100  |
+| 5    | 磷钼六方晶            | wx     | ￥70  |
+| 6    | 夜茗                  | afdian | ￥60  |
+| 7    | 白糖                  | afdian | ￥50  |
+| 8    | 铁锅炖汤圆            | zfb    | ￥50  |
+| 9    | 爱发电用户cb6c6 (衍)  | afdian | ￥20  |
+| 10    | Asolarium             | afdian | ￥15  |
+| 11   | 爱发电用户_c31cc      | afdian | ￥15  |
+| 12   | 爱发电用户_e3288      | afdian | ￥15  |
+| 13   | 是紫陌啊              | afdian | ￥10  |
+| 14   | 环.虬凌dragon      | afdian | ￥5   |
+| 15   | 爱发电用户_96c93      | afdian | ￥5   |
+| 16   | 硫煞Sulfury           | afdian | ￥5   |
+| 17   | 假设作者是晓拾捌      | afdian | ￥5   |
+| 18   | 爱发电用户_f7735      | afdian | ￥5   |
 
 ## 投喂九九！
 
